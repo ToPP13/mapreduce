@@ -19,7 +19,7 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 configure_file(version.h.in version.h)
 
 
-add_executable(mapreduce mapreduce.cpp)
+add_executable(mapreduce mapreduce.cpp mapreducer.cpp filereader.cpp minunique.cpp)
 # Add an executable to the project using the specified source files.
 
 
