@@ -16,14 +16,19 @@
 
 
 
+typedef std::vector<std::string> dataSequence;
+typedef std::map<size_t, dataSequence> dataBatch;
+
 class MapReducer
 {
 public:
     MapReducer(int mnum, int rnum): _mnum(mnum), _rnum(rnum){};
     void process(std::string & src);
 
+    void shuffle(dataBatch & email_list, dataBatch & splitted_parts);
 private:
     std::vector<readInterval> get_read_interval(std::string & src, uint num_positions);
+    void set_sorted_data(std::vector<std::string> & sorted_lines, std::map<size_t, std::vector<std::string>> & data_vector);
     int _mnum;
     int _rnum;
 };
@@ -58,11 +63,13 @@ void SplitVector(std::map<size_t, std::vector<std::string>> & outMap, const std:
         outMap.insert({i, std::vector<T>(vec.begin() + begin, vec.begin() + end)});
         begin = end;
     }
+
+//    for (auto el: outMap)
+//    {
+//        for (auto e : el.second)
+//            std::cout << e << std::endl;
+//        std::cout << std::endl;
+//    }
 }
 
 std::ifstream::pos_type filesize(const char* filename);
-
-int get_common_symbols(std::string str1, std::string str2);
-
-
-void set_sorted_data(std::vector<std::string> & sorted_lines, std::map<uint, std::vector<std::string>> & email_list);
