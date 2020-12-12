@@ -9,10 +9,6 @@ endif ()
 
 # Load settings for an external project.
 find_package (Threads REQUIRED)
-find_package (Boost COMPONENTS system regex REQUIRED)
-set(Boost_USE_STATIC_LIBS OFF)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
 
 
 # Copy a file to another location and modify its contents.
@@ -31,11 +27,11 @@ set_target_properties(mapreduce PROPERTIES
 
 # Add include directories to a target.
 # CMAKE_BINARY_DIR - The path to the top level of the build tree.
-target_include_directories(mapreduce PRIVATE "${CMAKE_BINARY_DIR}" ${Boost_INCLUDE_DIRS})
+target_include_directories(mapreduce PRIVATE "${CMAKE_BINARY_DIR}")
 
 # Add include directories to the build.
 
-target_link_libraries(mapreduce PRIVATE dl pthread ${Boost_LIBRARIES})
+target_link_libraries(mapreduce PRIVATE dl pthread)
 
 # Add compile options to a target.
 if (MSVC)
