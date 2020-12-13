@@ -1,0 +1,86 @@
+\hypertarget{mapreducer_8h}{}\doxysection{mapreducer.\+h File Reference}
+\label{mapreducer_8h}\index{mapreducer.h@{mapreducer.h}}
+{\ttfamily \#include \char`\"{}algorithm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}iostream\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}filereader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}minunique.\+h\char`\"{}}\newline
+Include dependency graph for mapreducer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mapreducer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{mapreducer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMapReducer}{Map\+Reducer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}{data\+Sequence}}
+\item 
+typedef std\+::map$<$ size\+\_\+t, \mbox{\hyperlink{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}{data\+Sequence}} $>$ \mbox{\hyperlink{mapreducer_8h_ac86b283d2446e0487bb4eb652c8f5539}{data\+Batch}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{mapreducer_8h_a87ef49bdad4316ec45410e67a7ab096e}{insert\+\_\+sorted}} (std\+::vector$<$ T $>$ \&vec, T const \&item)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{mapreducer_8h_ad34d5d4e354997de6433f22ceb70220e}{Split\+Vector}} (std\+::map$<$ size\+\_\+t, std\+::vector$<$ std\+::string $>$$>$ \&out\+Map, const std\+::vector$<$ T $>$ \&vec, size\+\_\+t n)
+\item 
+std\+::ifstream\+::pos\+\_\+type \mbox{\hyperlink{mapreducer_8h_a8c6844cf2cd80406fbf7dd727fb3440b}{filesize}} (const char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{mapreducer_8h_ac86b283d2446e0487bb4eb652c8f5539}\label{mapreducer_8h_ac86b283d2446e0487bb4eb652c8f5539}} 
+\index{mapreducer.h@{mapreducer.h}!dataBatch@{dataBatch}}
+\index{dataBatch@{dataBatch}!mapreducer.h@{mapreducer.h}}
+\doxysubsubsection{\texorpdfstring{dataBatch}{dataBatch}}
+{\footnotesize\ttfamily typedef std\+::map$<$size\+\_\+t, \mbox{\hyperlink{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}{data\+Sequence}}$>$ \mbox{\hyperlink{mapreducer_8h_ac86b283d2446e0487bb4eb652c8f5539}{data\+Batch}}}
+
+\mbox{\Hypertarget{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}\label{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}} 
+\index{mapreducer.h@{mapreducer.h}!dataSequence@{dataSequence}}
+\index{dataSequence@{dataSequence}!mapreducer.h@{mapreducer.h}}
+\doxysubsubsection{\texorpdfstring{dataSequence}{dataSequence}}
+{\footnotesize\ttfamily typedef std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{mapreducer_8h_a9a8ccd0f6d6e9fce31af10548aecfc75}{data\+Sequence}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mapreducer_8h_a8c6844cf2cd80406fbf7dd727fb3440b}\label{mapreducer_8h_a8c6844cf2cd80406fbf7dd727fb3440b}} 
+\index{mapreducer.h@{mapreducer.h}!filesize@{filesize}}
+\index{filesize@{filesize}!mapreducer.h@{mapreducer.h}}
+\doxysubsubsection{\texorpdfstring{filesize()}{filesize()}}
+{\footnotesize\ttfamily std\+::ifstream\+::pos\+\_\+type filesize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mapreducer_8h_a87ef49bdad4316ec45410e67a7ab096e}\label{mapreducer_8h_a87ef49bdad4316ec45410e67a7ab096e}} 
+\index{mapreducer.h@{mapreducer.h}!insert\_sorted@{insert\_sorted}}
+\index{insert\_sorted@{insert\_sorted}!mapreducer.h@{mapreducer.h}}
+\doxysubsubsection{\texorpdfstring{insert\_sorted()}{insert\_sorted()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$\+::iterator insert\+\_\+sorted (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{vec,  }\item[{T const \&}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mapreducer_8h_ad34d5d4e354997de6433f22ceb70220e}\label{mapreducer_8h_ad34d5d4e354997de6433f22ceb70220e}} 
+\index{mapreducer.h@{mapreducer.h}!SplitVector@{SplitVector}}
+\index{SplitVector@{SplitVector}!mapreducer.h@{mapreducer.h}}
+\doxysubsubsection{\texorpdfstring{SplitVector()}{SplitVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Split\+Vector (\begin{DoxyParamCaption}\item[{std\+::map$<$ size\+\_\+t, std\+::vector$<$ std\+::string $>$$>$ \&}]{out\+Map,  }\item[{const std\+::vector$<$ T $>$ \&}]{vec,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+

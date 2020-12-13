@@ -1,0 +1,40 @@
+\hypertarget{CMakeLists_8txt}{}\doxysection{CMake\+Lists.\+txt File Reference}
+\label{CMakeLists_8txt}\index{CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_aa458e1373f9c54a4ec0739614b21f4f2}{cmake\+\_\+minimum\+\_\+required}} (VERSION 3.\+2) if(DEFINED ENV
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_a4928c1351bedd48fa6866075185936e5}{project}} (mapreduce VERSION 0.\+0. \$ENV\{TRAVIS\+\_\+\+BUILD\+\_\+\+NUMBER\}) else() project(mapreduce VERSION 0.\+0.\+1) endif() find\+\_\+package(Threads REQUIRED) configure\+\_\+file(version.\+h.\+in version.\+h) add\+\_\+executable(mapreduce mapreduce.\+cpp mapreducer.\+cpp filereader.\+cpp minunique.\+cpp) set\+\_\+target\+\_\+properties(mapreduce PROPERTIES CXX\+\_\+\+STANDARD 14 CXX\+\_\+\+STANDARD\+\_\+\+REQUIRED ON) target\+\_\+include\+\_\+directories(mapreduce PRIVATE \char`\"{}\$
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_a66693c3f34e998d0a6102f3162c4ef28}{target\+\_\+link\+\_\+libraries}} (mapreduce PRIVATE dl pthread) if(MSVC) target\+\_\+compile\+\_\+options(mapreduce PRIVATE/W4) else() target\+\_\+compile\+\_\+options(mapreduce PRIVATE -\/Wall -\/Wextra -\/pedantic -\/Werror) endif() install(TARGETS mapreduce RUNTIME DESTINATION bin) \mbox{\hyperlink{CMakeLists_8txt_a9267ccdfbbaf6ba4f55c35f3a1f7fd90}{set}}(CPACK\+\_\+\+GENERATOR DEB) \mbox{\hyperlink{CMakeLists_8txt_a9267ccdfbbaf6ba4f55c35f3a1f7fd90}{set}}(CPACK\+\_\+\+PACKAGE\+\_\+\+VERSION\+\_\+\+MAJOR \char`\"{}\$
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_a9267ccdfbbaf6ba4f55c35f3a1f7fd90}{set}} (CPACK\+\_\+\+PACKAGE\+\_\+\+VERSION\+\_\+\+MINOR \char`\"{}\$\{PROJECT\+\_\+\+VERSION\+\_\+\+MINOR\}\char`\"{}) set(CPACK\+\_\+\+PACKAGE\+\_\+\+VERSION\+\_\+\+PATCH \char`\"{}\$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CMakeLists_8txt_aa458e1373f9c54a4ec0739614b21f4f2}\label{CMakeLists_8txt_aa458e1373f9c54a4ec0739614b21f4f2}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{VERSION 3.}]{2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_a4928c1351bedd48fa6866075185936e5}\label{CMakeLists_8txt_a4928c1351bedd48fa6866075185936e5}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!project@{project}}
+\index{project@{project}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}}
+{\footnotesize\ttfamily project (\begin{DoxyParamCaption}\item[{mapreduce VERSION 0.\+0. \$ENV\{TRAVIS\+\_\+\+BUILD\+\_\+\+NUMBER\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_a9267ccdfbbaf6ba4f55c35f3a1f7fd90}\label{CMakeLists_8txt_a9267ccdfbbaf6ba4f55c35f3a1f7fd90}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{CPACK\+\_\+\+PACKAGE\+\_\+\+VERSION\+\_\+\+MINOR \char`\"{}\$\{PROJECT\+\_\+\+VERSION\+\_\+\+MINOR\}\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_a66693c3f34e998d0a6102f3162c4ef28}\label{CMakeLists_8txt_a66693c3f34e998d0a6102f3162c4ef28}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!target\_link\_libraries@{target\_link\_libraries}}
+\index{target\_link\_libraries@{target\_link\_libraries}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{target\_link\_libraries()}{target\_link\_libraries()}}
+{\footnotesize\ttfamily target\+\_\+link\+\_\+libraries (\begin{DoxyParamCaption}\item[{mapreduce PRIVATE dl}]{pthread }\end{DoxyParamCaption})}
+
